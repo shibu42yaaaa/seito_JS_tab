@@ -13,11 +13,17 @@
   // クリックしたら起こるイベント
   const handleClick = (e) => {
     e.preventDefault();
-    
+
     console.log('Clicked!!');
   };
 
-  $nav[0].addEventListener('click', (e) => handleClick(e));
+  let index = 0;
+  while(index < $nav.length){
+    $nav[index].addEventListener('click', (e) => handleClick(e));
+    index++;
+  }
+
+  
 
 // console.log('$content', $content)
 
